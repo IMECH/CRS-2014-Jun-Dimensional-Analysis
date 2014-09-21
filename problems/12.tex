@@ -1,0 +1,139 @@
+\begin{problem}[12]
+能否用水洞做机翼的模型实验, 或用风洞做潜艇的模型实验? 如果可以, 问尺寸和速度的缩比范围?
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+
+\noindent\begin{minipage}[c]{0.7\linewidth}
+先不具体讨论机翼或潜艇, 统称为固体, 假设固体形状的特征长度是$l, l', \cdots$, 均匀来流速度为$v$, 方位角为$\alpha$, 流体的密度为$\rho$, 粘性系数为$\mu$. 则固体受到流体的作用力$W$可表示为
+\end{minipage}
+\begin{minipage}[c]{0.3\linewidth}
+\begin{center}
+%\input{./figures/airfoil.tikz}
+\input{./figures/bodyRE.tikz}
+\end{center}
+\end{minipage}
+\[
+W = f(l,l',\cdots, v, \alpha; \rho, \mu)
+\]
+上式中各物理量的量纲分别为:$[l]=[l']=\cdots=L$, $[v]=LT^{-1}$, $\alpha$为无量纲量, $[\rho]=ML^{-3}$, $[\mu]=ML^{-1}T^{-1}$. 选取$l$, $v$, $\rho$作为基本量, 且作为本问题的单位系统, 用以度量问题中的各量. 于是, 得到各量的量值所满足的关系
+\[
+\frac{W}{\rho v^2 l^2} = f\bigg(1,\frac{l'}{l},\cdots,\alpha,1,\frac{\mu}{\rho vl}\bigg) 
+\quad\Longrightarrow\quad
+ W = \rho v^2 l^2 f(l'/l,\cdots,\alpha,\mathrm{Re})
+\]
+如果要用模型实验来求取无量纲函数$f$, 那么在模型(用下标$\mathrm{m}$表示)和原型(用下标$\mathrm{p}$表示)之间, 要满足以下两方面条件
+\begin{itemize}
+\item 几何相似: $(l'/l,\cdots)_\mathrm{m}=(l'/l,\cdots)_\mathrm{p}$ 及 $\alpha_m = \alpha_p$
+\item 动力学相似: $(\mathrm{Re})_\mathrm{m} = (\mathrm{Re})_\mathrm{p}$
+\end{itemize}
+基于上面对一般情况的分析, 下面分别讨论水洞做机翼的模型实验和风洞做潜艇的模型实验的可行性:
+\begin{enumerate}
+\item \textbf{水洞做机翼的模型实验:}
+
+世界上最大的水洞一般认为是宾夕法尼亚州立大学的Garfield Thomas水洞\cite{Garfield,wiki_Water_tunnel}, 长$30\mathrm{m}$, 高达$10\mathrm{m}$, 最大水流速度可达$18\mathrm{m/s}$. 而超高速的水洞来流速度可达$84\mathrm{m/s}$\cite{Garfield}. 对于一般的水洞(本题中所考虑的水洞), 直径通常小于$2\mathrm{m}$, 来流速度小于$10\mathrm{m/s}$. 
+美国比较流行的CTSW私人小飞机\cite{CTSW}其翼展为$8.5\mathrm{m}$, 全长$6.2\mathrm{m}$, 总高$2.2\mathrm{m}$, 最低巡航速度$65\mathrm{km/h}$. 本题飞机的参数选取主要参考CTSW私人小飞机.
+\begin{figure}[!htb]
+\centering
+\begin{minipage}[t]{.495\linewidth}
+\centering
+\input{./figures/AircraftInWater.tikz} 
+\caption{\label{fig:3dAircraftModeling}三维飞机的水洞模拟}
+\end{minipage}
+\begin{minipage}[t]{.495\linewidth}
+\centering
+\input{./figures/AirfoilINWater.tikz}
+\caption{\label{fig:2dAircraftModeling}二维翼形的水洞模拟}
+\end{minipage}
+\end{figure}
+
+表\ref{tab:airfoilINwater}列出了低速小飞机在空气中飞行的参数范围和水洞实验允许的参数值, 以及空气和水的运动粘性系数\cite{fluid_Properties}. 做机翼的模型实验, 考虑到实验时模型的放置方式, 三维模拟时, 尺寸应以翼展方向的缩比为准; 二维模拟时, 尺寸应以翼型厚度方向的缩比为准. \textcolor{blue}{为消除边界影响, 模型的厚度不应大于水洞直径的1/5}.
+
+\begin{table}[!htb]\label{tab:airfoilINwater}
+\centering
+\caption{水洞做机翼的模型实验与原型的各参量范围}
+\begin{tabular}{l|c|c}
+\hline 
+ & 原型参数实际范围 & 模型参数允许范围\tabularnewline
+\hline 
+翼展长度$l\,(\mathrm{m})$ & $>8.0$ & $<2.0$\tabularnewline
+翼形厚度$h\,(\mathrm{m})$ & $>0.2$ & \textcolor{blue}{$<2/5$}\tabularnewline
+\hline 
+$v\,(\mathrm{m/s})$ & $>20$ & $<10$\tabularnewline
+\hline 
+$\nu=\mu/\rho\,(\mathrm{m^{2}/s})$ & $1.5\times 10^{-5}$ & $1.0\times 10^{-6}$\tabularnewline
+\hline 
+$\mathrm{Re_{3d}} = vl/\nu$ & $>1.0\times 10^7$ & $<2.0\times 10^7$\tabularnewline
+$\mathrm{Re_{2d}} = vh/\nu$ & $>1.3\times 10^5$ & $<4\times 10^6$ \tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+用表\ref{tab:airfoilINwater}中的参数可分别计算出原型和模型中的几何相似和动力学无量纲相似参数, 几何相似容易满足, 主要考查动力学相似, 通过计算原型和模型中雷诺数的范围(三维和二维模拟情况下的雷诺数范围见表\ref{tab:airfoilINwater}最后两列). \textbf{三维模拟}情况下, 尺寸缩比和速度缩比范围满足以下条件
+\[
+\alpha_l = \frac{l_\mathrm{p}}{l_\mathrm{m}} > \frac{8}{2}\, , 
+\quad 
+\alpha_v = \frac{v_\mathrm{p}}{v_\mathrm{m}} > \frac{20}{10}\, , 
+\quad 
+\alpha_l\cdot \alpha_v = \frac{\nu_\mathrm{p}}{\nu_\mathrm{m}}  = 15
+\]
+由此可解得尺寸缩比和速度缩比范围分别为
+\[
+\alpha_l \in (4, 15/2), \qquad \alpha_v \in (2, 15/4)
+\]
+因此在做三维模拟时, 水洞可以用来模拟翼展长度$l<15\mathrm{m}$, 速度$v<37.5\mathrm{m/s}$的飞机. 若把机翼简化成二维模型, 则可以模拟尺寸更大, 速度更快的飞机. 二维情况下, 尺寸缩比和速度缩比范围满足以下条件
+\[
+\alpha_l = \frac{h_\mathrm{p}}{h_\mathrm{m}} > \frac{0.2}{2/5}\, , 
+\quad 
+\alpha_v = \frac{v_\mathrm{p}}{v_\mathrm{m}} >\frac{20}{10}\, , 
+\quad 
+\alpha_l\cdot \alpha_v = \frac{\nu_\mathrm{p}}{\nu_\mathrm{m}}  = 15
+\]
+由此可解得尺寸缩比和速度缩比范围分别为
+\[
+\alpha_l \in (1/2, 15/2), \qquad \alpha_v \in (2, 30)
+\]
+因此在做\textbf{二维模拟}时, 水洞可以用来模拟翼形高度$h<3\mathrm{m}$, 速度$v<300\mathrm{m/s}$的飞机. 二维模拟能模拟飞机的尺寸和速度比三维模拟的范围更大.
+
+\item \textbf{风洞做潜艇的模型实验:}
+
+\begin{minipage}[c]{0.6\linewidth}
+
+%世界上最大的潜艇是Typhoons\cite{Typhoon}, 长$175\mathrm{m}$, 宽$23\mathrm{m}$, 速度可达$41.15\mathrm{km/h}$.
+芬兰海军的Saukko\cite{Saukko}潜艇是世界上最小的潜艇之一, 其长为$32.4\mathrm{m}$, 宽为$4.1\mathrm{m}$, 速度为$10.6\mathrm{km/h}$. 世界上最快的潜艇一般认为是苏联K-222潜艇\cite{K-222}, 速度可达$82.8\mathrm{km/h}$. 低速风洞的直径一般小于$6\mathrm{m}$\cite{baike_wind_tunnel,wike_wind_tunnel}, \textcolor{blue}{为消除边界影响, 模型的宽度不应大于风洞直径的1/3}, \textcolor{red}{这里限制风洞马赫数低于0.3, 即风洞的气流速度低于$100\mathrm{m/s}$}. 
+\end{minipage}
+\begin{minipage}[c]{0.4\linewidth}
+\begin{center}
+\input{./figures/SubmarineInAir.tikz}
+\end{center}
+\end{minipage}
+
+表\ref{tab:submarineINair}列出了潜艇在水中前进的参数范围和风洞实验允许的参数值.
+用类似``水洞做机翼的模型实验''的讨论方法, 对风洞做潜艇的模型实验进行讨论和分析. 通过计算发现原型和模型的雷诺数(见表\ref{tab:submarineINair})范围有交集, 用风洞做小尺寸, 低速度小尺寸潜艇的模型实验是可行的.
+\begin{table}[!htb]\label{tab:submarineINair}
+\centering
+\caption{风洞做潜艇的模型实验与原型的各参量范围}
+\begin{tabular}{c|ccc|c}
+\hline 
+ &潜艇宽度$l$$(\mathrm{m})$ & $v$$(\mathrm{m/s})$ & $\nu=\mu/\rho$$(\mathrm{m^2/s})$ & $\mathrm{Re}=vl/\nu$\tabularnewline
+\hline 
+原型 & $>4$ & $>2$ & $1.0\times 10^{-6}$ & $>8.0\times 10^6$\tabularnewline
+\hline 
+模型 & \textcolor{blue}{$<6/3$} & \textcolor{red}{$<100$} & $1.5\times 10^{-5}$ & $<1.3\times 10^7$\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+尺寸和速度的缩比范围满足
+\[
+\alpha_l>\frac{4}{6/3}, \quad \alpha_v>\frac{2}{100}, \quad \alpha_l\cdot \alpha_v = \frac{\nu_\mathrm{p}}{\nu_\mathrm{m}} = \frac{1}{15}
+\]
+由此可解得尺寸缩比和速度缩比范围分别为
+\[
+\alpha_l \in (2,10/3), \quad \alpha_v \in (1/50, 1/30)
+\]
+因此在做风洞做潜艇的模型实验时, 风洞可以用来模拟宽$l<20/3=6.7\mathrm{m}$, 速度$v<100/30=3.3\mathrm{m/s}$的潜艇.
+
+\end{enumerate}
+\end{solution}
+\label{problem:12}

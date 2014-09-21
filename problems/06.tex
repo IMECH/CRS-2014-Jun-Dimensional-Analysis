@@ -1,0 +1,46 @@
+\begin{problem}[06]
+从量纲幂次式的讨论中得到的偏导数关系, 求出量纲函数的最终表示式.
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+书\cite{tan_dimensional_2011}中式(2.10)为从量纲幂次式的讨论中得到的偏导数关系, 即以下三式:
+\[
+\frac{\frac{\partial f}{\partial r_l}(r_l, r_m, r_t)}{f(r_l, r_m, r_t)} = \frac{\alpha}{r_l}
+, \qquad
+\frac{\frac{\partial f}{\partial r_m}(r_l, r_m, r_t)}{f(r_l, r_m, r_t)} = \frac{\beta}{r_m}
+, \qquad
+\frac{\frac{\partial f}{\partial r_t}(r_l, r_m, r_t)}{f(r_l, r_m, r_t)} = \frac{\gamma}{r_t}
+\]
+整理上式, 并将$f(r_l, r_m, r_t)$简写为$f$可得
+\begin{equation}\label{eq:partialF/partialR}
+\frac{\partial f}{\partial r_l}= \frac{\alpha}{r_l}f
+, \qquad
+\frac{\partial f}{\partial r_m}= \frac{\beta}{r_m}f
+, \qquad
+\frac{\partial f}{\partial r_t}= \frac{\gamma}{r_t}f
+\end{equation}
+对函数$f(r_l, r_m, r_t)$进行全微分得
+\begin{equation}\label{eq:df}
+df = \frac{\partial f}{\partial r_l}dr_l + \frac{\partial f}{\partial r_m}dr_m + \frac{\partial f}{\partial r_t}dr_t
+\end{equation}
+将式(\ref{eq:partialF/partialR})代入式(\ref{eq:df})得
+\begin{equation}
+df = \alpha f \frac{dr_l}{r_l} + \beta f \frac{dr_m}{r_m} + \gamma f \frac{dr_t}{r_t} 
+\quad \Longrightarrow \quad 
+\frac{df}{f} = \alpha \frac{dr_l}{r_l} + \beta \frac{dr_m}{r_m} + \gamma \frac{dr_t}{r_t}
+\end{equation}
+对上式得到的关系两边同时进行积分得
+\begin{equation}
+\ln f = \alpha \ln r_l + \beta \ln r_m + \gamma \ln r_t + \ln C
+\quad \Longrightarrow \quad 
+f = C r_r^{\alpha} r_m^{\beta} r_t^{\gamma}
+\end{equation}
+其中$C$为待定常数, 若单位系中的长度, 质量, 和时间不变, 则对应的缩放倍数可看成$r_l=1$, $r_m=1$, $r_t=1$, 显然有$f(1,1,1) = C = 1$. 因此
+\begin{equation}
+f = r_r^{\alpha} r_m^{\beta} r_t^{\gamma}
+\end{equation}
+可见, 与之相对应, 物理量$X$的量纲表达式应为
+\[
+[X] = L^\alpha M^\beta T^\gamma
+\]
+\end{solution}

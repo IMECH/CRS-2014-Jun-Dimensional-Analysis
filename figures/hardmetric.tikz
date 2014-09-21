@@ -1,0 +1,16 @@
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,arrows}
+\begin{tikzpicture}
+\fill[top color=white, bottom color=gray] (-1,0) arc(-180:0:1);
+\draw[thick] (-1,0) arc(-180:0:1);
+\draw[thick]  (-2,-0.5) -- (-1.325,-0.5) arc(-90:0:0.34);
+\draw[thick]  (2,-0.5) -- (1.325,-0.5) arc(270:180:0.34);
+\draw[thick,blue,dashed] (0,-1)--(2,-1) (0,0.25)--(0,-1);
+\draw[thick,blue,<->,>=stealth'] (0,-0.2)--(1,-0.2) node[midway,above]{$a$};
+
+\draw[thick,blue,<-,>=stealth'] (0,0.25)--(0,1) node[above]{$F$};
+\draw[thick,blue,<->,>=stealth'] (0,0)--(-1,0) node[midway,above]{$R$};
+\draw[thick,blue,<->,>=stealth'] (0.75,-1)--(0.75,-0.2) node[midway,left]{$h_c$};
+
+\draw[thick,blue,<->,>=stealth'] (1.5,-1)--(1.5,-0.5) node[midway,right]{$h$};
+\end{tikzpicture}

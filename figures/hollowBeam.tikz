@@ -1,0 +1,17 @@
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,arrows}
+\usetikzlibrary{shapes}
+\begin{tikzpicture}[scale=0.9]
+\draw[thick,fill=gray!20] (-0.75,-0.75) rectangle(0.75,0.75);
+\draw[thick,fill=white]  (-0.4,-0.4) rectangle (0.4,0.4);
+
+
+\draw[thick,blue,<-,>=stealth'] (-0.75,0.8)--(-0.75,1.2) (0.75,0.8)--(0.75,1.2) (-0.75,1)--(-0.3,1) node[right]{$h_\mathrm{o}$};
+\draw[thick,blue,->,>=stealth'] (0.3,1)--(0.75,1) ;
+\draw[thick,blue,<->,>=stealth'] (-0.4,-0.25)--(0.4,-0.25) node[midway,above]{$h_\mathrm{i}$} ;
+
+
+\draw[thick,fill=gray!20] (1.75,-0.75) rectangle(3.25,0.75);
+\draw[thick,blue,<-,>=stealth'] (1.75,0.8)--(1.75,1.2) (3.25,0.8)--(3.25,1.2) (1.75,1)--(2.25,1) node[right]{$h$};
+\draw[thick,blue,->,>=stealth'] (2.8,1)--(3.25,1) ;
+\end{tikzpicture}

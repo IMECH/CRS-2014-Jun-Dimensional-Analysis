@@ -1,0 +1,20 @@
+\usetikzlibrary{%
+    decorations.pathreplacing,%
+    decorations.pathmorphing,arrows
+}
+\begin{tikzpicture}[ media/.style={font={\footnotesize\sffamily}},
+    wave/.style={
+        decorate,decoration={snake,post length=1.4mm,amplitude=2mm,
+        segment length=2mm},thick},
+    interface/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=2mm}}}]
+\draw[thick,interface] (0.5,3.75)--(-1,3.75);
+\draw[->,>=stealth',thick,blue](0,3.75)--(0,0);
+
+\draw [thick](0,3.75)--(-1,1) node[midway,above left,blue]{$l$};
+\draw [blue,->,>=stealth',thick] (-1,1) -- (-1, 0) node [below]{$g$};
+\draw [fill=gray](-1,1) circle(0.1) node [right,blue]{$m$};
+\draw[blue] (0,3) arc(-90:-110:0.75);
+ \node[blue] at (-0.2,2.7) {$\theta$};
+\end{tikzpicture}

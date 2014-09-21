@@ -1,0 +1,23 @@
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,arrows}
+\usetikzlibrary{shapes}
+\begin{tikzpicture}
+\draw [thick] (-2,-0.5) rectangle (2,0.5);
+\draw [thick,blue] (2,0.5) arc (0:180:2 and 0.6) node[midway,above=13pt]{$q$};
+\draw[thick,blue,->,>=stealth'] (0.4,1.1)--(0.4,0.5);
+\draw[thick,blue,->,>=stealth'] (-0.4,1.1)--(-0.4,0.5);
+\draw[thick,blue,->,>=stealth'] (0.8,1.05)--(0.8,0.5);
+\draw[thick,blue,->,>=stealth'] (-0.8,1.05)--(-0.8,0.5);
+\draw[thick,blue,->,>=stealth'] (1.2,0.98)--(1.2,0.5);
+\draw[thick,blue,->,>=stealth'] (-1.2,0.98)--(-1.2,0.5);
+\draw[thick,blue,->,>=stealth'] (1.6,0.85)--(1.6,0.5);
+\draw[thick,blue,->,>=stealth'] (-1.6,0.85)--(-1.6,0.5);
+
+\draw [thick,blue,dashed] (-2,0.5) arc (210:330:2.3 and 0.75)
+                                                    (-2,-0.5) arc (210:330:2.3 and 0.75);
+\draw[thick,blue,<->,>=stealth'] (0,-0.5)--(0,-0.89) node[midway,right]{$w$};
+
+\draw (-2,-0.5) node[below,draw=blue,thick,regular polygon, regular polygon sides=3,  inner sep=1.25]{};
+\draw (2,-0.5) node[draw=blue,thick,below,regular polygon, regular polygon sides=3,  inner sep=1.25]{};
+\draw[thick,blue,>=stealth'](-2,-0.75)--(-2,-1.25) (2,-0.75)--(2,-1.25); \draw[thick,blue,<-,>=stealth'](-2,-1.15)--(-0.25,-1.15) node[right]{$l$}; \draw[thick,blue,<-,>=stealth'](2,-1.15)--(0.25,-1.15);
+\end{tikzpicture}

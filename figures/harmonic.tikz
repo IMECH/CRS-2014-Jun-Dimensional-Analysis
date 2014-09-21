@@ -1,0 +1,16 @@
+\usetikzlibrary{%
+    decorations.pathreplacing,%
+    decorations.pathmorphing,arrows
+}
+\begin{tikzpicture}[ media/.style={font={\footnotesize\sffamily}},
+    wave/.style={
+        decorate,decoration={snake,post length=1.4mm,amplitude=2mm,
+        segment length=2mm},thick},
+    interface/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=2mm}}}]
+\draw[thick,interface](0,0)--(3,0)--(3,0.6);
+\draw[wave](3,0.25)--(1,0.25) node[above=6pt,midway,blue]{$k$};
+\draw  (1,0) rectangle (0.5,0.5) node[above right,blue]{$m$};
+
+\end{tikzpicture}

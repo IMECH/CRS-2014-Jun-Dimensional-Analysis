@@ -1,0 +1,24 @@
+\begin{problem}[25]
+求两块平板正面相撞引起的弹性波的波速(与有关弹性波书中的结果作对比).
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+两块平板正面相撞, 产生的弹性波为传播体积变形的纵波, 波速传播速度$c$与板厚无关, 不存在度量波长的特征长度量. 该问题的控制参数为材料密度$\rho$, 泊松比$\nu$和杨氏模量$E$, 因此有
+\[
+c = f(\rho,\nu,E)
+\]
+上式各物理量的量纲分别为: $[c]=LT^{-1}$, $[\rho]=ML^{-3}$, $\nu$为无量纲量, $[E]=ML^{-1}T^{-2}$. 取$\rho$, $E$为基本量, 于是上式可转化为以下无量纲关系
+\[
+\frac{c}{\sqrt{E/\rho}} = f(1,\nu,1) = f(\nu) 
+\quad\Longrightarrow\quad
+c = \sqrt{\frac{E}{\rho}}~f(\nu)
+\]
+在Miklowitz的``The theory of elastic dynamics''\cite{miklowitz_theory_1978}一书中, 式(1.49)及式(2.3)给出了弹性纵波波速
+\[
+C_d = \sqrt{\lambda+2\mu} = \sqrt{\frac{\nu E}{(1+\nu)(1-2\nu)}+\frac{2E}{2(1+\nu)}}=\sqrt{\frac{1-\nu}{(1+\nu)(1-2\nu)}\frac{E}{\rho}}
+\]
+因此可知量纲分析结果中的$f(\nu)$的形式为
+\[
+f(\nu) = \sqrt{\frac{1-\nu}{(1+\nu)(1-2\nu)}}
+\]
+\end{solution}

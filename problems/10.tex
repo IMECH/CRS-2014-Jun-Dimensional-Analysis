@@ -1,0 +1,21 @@
+\begin{problem}[10]
+若溢洪道的断面为三角形, 讨论溢洪流量.
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+\begin{minipage}[c]{0.8\linewidth}
+溢洪流量与流体的密度$\rho$, 重力加速度$g$, 上游水头$h$及三角形的顶角$\alpha$有关, 溢过三角形断面的流量为$Q$, 则有
+\[
+Q = f(\rho, g, h, \alpha)
+\]
+\end{minipage}
+\begin{minipage}[c]{0.2\linewidth}
+\begin{center}
+\input{./figures/spillway.tikz}
+\end{center}
+\end{minipage}
+上式中的各物理量的量纲分别为: $[Q]=MT^{-1}$, $[\rho]=ML^{-3}$, $[g]=LT^{-2}$, $[h]=L$, 而$\alpha$为无量纲量. 选取$\rho$, $g$, $h$三个量作为基本量, 且作为本问题的单位系统, 用以度量问题中的各量. 于是, 得到各量的量值所满足的关系
+\[
+\frac{Q}{\rho h^3 \sqrt{g/h}} = f(1,1,1,\alpha) \qquad \Longrightarrow \qquad Q = \rho g^{1/2} h^{5/2}f(\alpha)
+\]
+\end{solution}

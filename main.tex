@@ -1,0 +1,214 @@
+\documentclass[12pt,a4paper,boxed,titlepage]{caspset}
+
+% set 1-inch margins in the document
+%\usepackage[left=1in,right=1in,top=1.2in,bottom=1in]{geometry}
+\usepackage[left=1in,right=1in,top=1.2in,bottom=1in]{geometry}
+\usepackage{lastpage}
+\usepackage{pdflscape}
+% include this if you want to import graphics files with /includegraphics
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{chngpage}
+\usepackage{soul}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx,float,wrapfig}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multimedia}
+\usepackage[toc,page,title,titletoc,header]{appendix}
+\usepackage{color, soul}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{pdfpages}
+\usetikzlibrary{%
+    decorations.pathreplacing,%
+    decorations.pathmorphing,arrows
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xeCJK}
+%\usepackage{fontspec}
+\setCJKmainfont[BoldFont=simhei.ttf]{simsun.ttf}
+\setCJKsansfont{simhei.ttf}
+\setCJKmonofont{simfang.ttf}
+
+%\setCJKmainfont{Adobe Song Std}
+%\setCJKmainfont[BoldFont=Adobe Heiti Std]{Adobe Song Std}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{figures/}}
+
+\setulcolor{red}
+
+\setlength{\marginparwidth}{1in}
+
+\newcommand{\hmwkTitle}{量纲分析}
+%\newcommand{\hmwkSubTitle}{} % No subtitle, so this will be excluded
+\newcommand{\hmwkDueDate}{\today}
+\newcommand{\hmwkClass}{中科院力学所}
+\newcommand{\hmwkClassTime}{Mon.{~}08:15}
+\newcommand{\hmwkClassInstructor}{谈庆明}
+\newcommand{\hmwkAuthorName}{周吕文}
+
+\hypersetup{pdfauthor={\hmwkAuthorName}, 
+            pdftitle={量纲分析作业整理}, 
+            pdfsubject={\hmwkTitle, \hmwkClassInstructor},
+            pdfkeywords={量纲分析, 力学},
+            pdfproducer={XeLateX with hyperref},
+            pdfcreator={Xelatex}}
+%% Setup the header and footer
+\pagestyle{fancy}                                                       %
+\lhead{\hmwkAuthorName}                                                 %
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}  %
+\rhead{第\ \thepage\ 页, 共\ \protect\pageref{LastPage} 页}          %
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\renewcommand\refname{\bf\large 参考文献}
+\renewcommand\contentsname{\bf 目 \ \ \ 录}
+\renewcommand\figurename{\bf 图}
+\renewcommand\tablename{\bf 表}
+\renewcommand{\appendixtocname}{附录}
+\renewcommand{\appendixpagename}{附录}
+\renewcommand\listfigurename{图目录}
+
+% info for header block in upper right hand corner
+%\name{周吕文{~}201128000718065}
+%\class{物理学院{~}20110308班}
+%\assignment{习题整理}
+%\duedate{06/14/2014}
+
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblesubsection[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+  \subsectionmark{#1}}
+
+\begin{document}
+\title{量纲分析(2014春)习题整理\\ \vspace{-40pt} }
+
+\author{{\Large 授课老师:谈庆明}\\ \vspace{50pt}\\ 周吕文\\ \href{mailto:zhou.lv.wen@gmail.com}{zhou.lv.wen@gmail.com}\\ \vspace{50pt}}
+\date{中国科学院力学研究所\\2014年6月14日}
+%\tableofcontents
+\maketitle 
+\enlargethispage{2\baselineskip}
+\vspace{-0.5em}
+\tableofcontents
+\setcounter{page}{0}
+\newpage
+
+\invisiblesection{课前习题}
+\problemlist{量纲分析{~}课前习题}
+\invisiblesubsection{什么是量纲分析}
+\input{./problems/i}
+\invisiblesubsection{为什么选修量纲分析}
+\input{./problems/ii}
+\invisiblesubsection{流体是什么, 有什么性质}
+\input{./problems/iii}
+\invisiblesubsection{什么是固体, 用什么来表征}
+\input{./problems/iv}
+\newpage
+\invisiblesubsection{怎样表征固体的弹塑性}
+\input{./problems/v}
+\invisiblesubsection{什么是耦合}
+\input{./problems/vi}
+\invisiblesubsection{什么是动态/静态/准静态}
+\input{./problems/vii}
+
+\newpage
+
+\invisiblesection{课后习题}
+\problemlist{量纲分析{~}课后习题}
+\invisiblesubsection{量纲与单位的区别和关系}
+\input{./problems/01}
+\invisiblesubsection{Dimension词义和演变}
+\input{./problems/02}
+\invisiblesubsection{自由落体的提法}
+\input{./problems/03}
+\invisiblesubsection{摆锤质量与单摆周期无关的原因}
+\input{./problems/04}
+\invisiblesubsection{谐振子的自振频率}
+\input{./problems/05}
+\invisiblesubsection{由偏导数关系推导量纲函数的最终表示式}
+\input{./problems/06}
+\newpage
+\invisiblesubsection{相似三定理与$\Pi$定理}
+\input{./problems/07}
+\newpage
+\invisiblesubsection{隐函数法证明$\Pi$定理}
+\input{./problems/08}
+\invisiblesubsection{小孔出流速度}
+\input{./problems/09}
+\newpage
+\invisiblesubsection{三角形断面的溢洪流量}
+\input{./problems/10}
+
+\invisiblesubsection{定常管流的摩擦系数}
+\input{./problems/11}
+\invisiblesubsection{水洞/风洞做机翼/潜艇的模型实验}
+\input{./problems/12}
+\invisiblesubsection{船舶润湿面积}
+\input{./problems/13}
+\invisiblesubsection{轴承问题是否该考虑惯性}
+\input{./problems/14}
+\invisiblesubsection{小球在粘流中的最终速度和粘性阻力}
+\input{./problems/15}
+\invisiblesubsection{表面张力对水波波速的影响}
+\input{./problems/16}
+\invisiblesubsection{两端固定的梁的挠度}
+\input{./problems/17}
+\invisiblesubsection{悬臂梁的最大挠度与梁长的关系}
+\input{./problems/18}
+\invisiblesubsection{方形空心简支梁的挠度}
+\input{./problems/19}
+\invisiblesubsection{需要考虑重力的结构物}
+\input{./problems/20}
+\invisiblesubsection{国内离心机调查}
+\input{./problems/21}
+\invisiblesubsection{有限弹性体的固有周期}
+\input{./problems/22}
+\invisiblesubsection{弹性体中体波有无色散}
+\input{./problems/23}
+\newpage
+\invisiblesubsection{杆径对波速的作用}
+\input{./problems/24}
+\invisiblesubsection{两平板正碰的弹性波波速}
+\input{./problems/25}
+\invisiblesubsection{球形压头硬度计硬度和强度关系}
+\input{./problems/26}
+\invisiblesubsection{什么是几何相似/相似律}
+\input{./problems/27}
+\invisiblesubsection{相似律是否一定要求几何相似}
+\input{./problems/28}
+\invisiblesubsection{典型金属中弹性变形和热传导的传播时间}
+\input{./problems/29}
+\invisiblesubsection{含水地层中弹性变形和渗流的传播时间}
+\input{./problems/30}
+
+\newpage
+
+\noindent\textbf{注: 本文档是在本人量纲分析课程作业的基础上, 根据谈老师的批注及课上讨论修改补充而成. 部分课后习题的解答参考了夏伟光同学的量纲作业整理\cite{xiaweiguang}. 量纲分析是一门非常有用的课程, 而且谈庆明老师的课讲得非常好, 强列推荐同学们选这门课.}
+
+\bibliographystyle{unsrt}
+\bibliography{biblo}
+
+\newpage
+\input{./problems/exam}
+\end{document} 

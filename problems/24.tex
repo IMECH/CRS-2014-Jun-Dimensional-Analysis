@@ -1,0 +1,21 @@
+\begin{problem}[24]
+杆径对杆中弹性波波速起什么物理作用?
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+杆中弹性波一方面沿着杆的长度方向传播, 另一方面, 当扰动遇到细杆和板壳的表面, 在表面边界条件的约束下, 反复发生反射, 杆径会约束和影响弹性波在杆中传播. 因此, \textbf{要用杆径作为单位来度量波长}, 这也使得杆中弹性波波速与杆径有关. 对于杆中弹性波, 假设波长为$\lambda$, 杆径为$R$, 密度为$\rho$, 杨氏模量为$E$, 泊松比为$\nu$, 波速$c$应当是上述5个控制参数的函数
+\[
+c = f(\rho, E, \nu; \lambda, R)
+\]
+上式中各物理量的量纲分别为: $[c]=LT^{-1}$, $[\rho]=ML^{-3}$, $[E]=ML^{-1}T^{-2}$, $\nu$为无量纲量, $[\lambda]=[R]=L$. 取$\rho$, $E$, $R$为基本量, 于是有以下无量纲关系:
+\[
+\frac{c}{\sqrt{E/\rho}} = f\bigg(1,1,\nu,\frac{\lambda}{R},1\bigg) = f(\nu, \lambda/R) 
+\quad\Longrightarrow\quad
+c = \sqrt{\frac{E}{\rho}}~f\bigg(\nu,\frac{\lambda}{R}\bigg)
+\]
+上式表明杆中弹性波的波速不仅与材料的性质有关, 还与波长$\lambda$及杆径$R$有关, 杆径起着关键作用. 因此杆中的弹性波是色散波. 对于细杆中的长波, 可近似得到压缩波的波速\cite{tan_dimensional_2011}为
+\[
+c = \sqrt{\frac{E}{\rho}} \bigg(1 - \pi^2 \nu^2 \Big(\frac{R}{\lambda}\Big)^2\bigg)
+\]
+上式表示$R$减小时, 波速增加, 当$R$减小致$R/\lambda\ll 1/(\pi\nu)$时, 波速$c\rightarrow \sqrt{E/\rho}$, 此时杆径对波速的影响可以忽略.
+\end{solution}

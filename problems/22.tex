@@ -1,0 +1,19 @@
+\begin{problem}[22]
+求有限弹性体的固有周期.
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+有限弹性体的振动实际上是动势能的相互转化现象, 动能源于运动惯性, 由介质的密度$\rho$表征, 弹性势能源于
+介质所具有的恢复变形的特性, 由杨氏模量$E$和泊松比$\nu$表征, 因此特征长度为$l,l',l'',\cdots$的有限弹性体的固有周期
+\[
+\Gamma = f(l,l',l'',\cdots,\rho,E,\nu)
+\]
+上式中各物理量的量纲分别为: $[\Gamma]=T$, $[l]=[l']=[l'']=\cdots = L$, $[\rho]=ML^{-3}$, $[E]=ML^{-1}T^{-2}$, $\nu$为无量纲常数. 取$l$, $\rho$和$E$作为基本量, 由上式可导出以下无量纲关系:
+\[
+\frac{\Gamma}{l\sqrt{\rho/E}} = f\bigg(1,\frac{l'}{l},\frac{l''}{l}, \cdots, 1, 1, \nu\bigg) = f\bigg(\frac{l'}{l},\frac{l''}{l}, \cdots, \nu\bigg)
+\]
+因此有限弹性体的固有周期为
+\[
+\Gamma = \frac{l}{\sqrt{E/\rho}}~f\bigg(\frac{l'}{l},\frac{l''}{l}, \cdots, \nu\bigg)
+\]
+\end{solution}

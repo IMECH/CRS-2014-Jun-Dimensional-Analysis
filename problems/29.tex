@@ -1,0 +1,27 @@
+\begin{problem}[29]
+估计和比较几种典型金属材料中弹性变形和热传导的传播时间.
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+在谈庆明的专著\cite{tan_dimensional_2011}中, 式(5.14)和式(5.15)分别给出了弹性变形和热传导的传播的特征时间即
+\[
+t_{\mathrm{e.w.}} \approx \frac{l}{\sqrt{E/\rho}},\quad t_{\mathrm{h.c.}} \approx \frac{\rho c l^2}{\lambda}
+\]
+其中$l$为物体的特征长度, $E$和$\rho$分别为杨氏模量和密度, $c$和$\lambda$分别为比热和热导系数. 基于以上两式, 比较特征长度$l=1\mathrm{m}$的几种典型金属(铜, 钢, 铝)材料中弹性变形和热传导的传播时间, 见表\ref{tab:metaltime}. 
+\begin{table}[!htb]
+\centering
+\caption{\label{tab:metaltime}几种典型金属材料(材料参数\cite{materialsproperty})中弹性变形和热传导的传播特征时间}
+{\small
+\begin{tabular}{c|cccc|cc|c}
+\hline 
+ & $\rho$ & $E$ & $c$ & $\lambda$ & $t_{\mathrm{e.w.}}$ & $t_{\mathrm{h.c.}}$ & \multirow{2}{*}{${\displaystyle O\bigg(\frac{t_{\mathrm{e.w.}}}{t_{\mathrm{h.c.}}}\bigg)}$}\tabularnewline
+ & $10^{3}\mathrm{kg/m^{3}}$ & $10^{11}\mathrm{kg/s^{2}/m}$ & $10^{3}\mathrm{N\cdot m/kg/K}$ & $10^{2}\mathrm{N/s/K}$ & $10^{-4}\mathrm{s}$ & $10^{4}\mathrm{s}$ & \tabularnewline
+\hline 
+Cu & 8.90 & 1.17 & 0.386 & 3.93 & 2.76 & 0.87 & $10^{-8}$\tabularnewline
+Fe & 7.90 & 2.00 & 0.470 & 0.329 & 1.99 & 11.29 & $10^{-9}$\tabularnewline
+Al & 2.70 & 0.70 & 0.942 & 2.36 & 1.96 & 1.08 & $10^{-8}$\tabularnewline
+\hline 
+\end{tabular}}
+\end{table}
+由此可见, 常见金属材料的弹性变形和热传导的特征传播时间相差约八到九个量级. 由局部温升引起的应力和应变的变化极其迅速地传播到物体内部各处, 而热传导与其相比则十分缓慢. 可以近似地认为两种效应是可以解耦的.
+\end{solution}

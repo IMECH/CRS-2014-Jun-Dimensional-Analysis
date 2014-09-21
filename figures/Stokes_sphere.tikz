@@ -1,0 +1,17 @@
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,arrows}
+\usetikzlibrary{shadows}
+\begin{tikzpicture}
+
+
+\node at (0,0) {\includegraphics[width=75pt]{./figures/Stokes_sphere.pdf}};
+\shadedraw [ball color= gray!30,thick] (0,0) circle (0.3);
+\draw[blue,thick](0.6,0.3) -- (0.9,0.3) (0.6,-0.3) -- (0.9,-0.3);
+\draw[blue,thick,<->,>=stealth](0.75,0.3) -- (0.75,-0.3) node[right, midway] {$d$};
+\node[blue] at (0,0) {$\rho_\mathrm{s}$};
+\draw[blue,->, >=stealth, thick](-0.75,-0.3) -- (-0.75,-1) node[below]{$g$};
+\draw[blue] (-0.75,0.5) node{$\rho$, $\mu$};
+\draw[blue,->, >=stealth, thick] (0,-0.3)--(0,-1) node[below] {$G$};
+\draw[blue,->, >=stealth, thick] (0,0.3)--(0,1) node[above] {$F_\mathrm{b}+F_\mathrm{v}$};
+
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,arrows}
+\usetikzlibrary{shapes}
+\begin{tikzpicture}[interface/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=2mm}}}]
+\draw[interface,thick] (0,0.5)--(0,-1.25);
+\draw [thick] (0,-0.1) rectangle (3.75,0.1);
+\draw [thick,blue,dashed] (0,0.1) arc (90:60:7.25 and 7.25) --++(-0.1,-0.17321)  arc (60:90:7 and 7) ;
+\draw [thick,blue,->,>=stealth'](1.875,0)--(1.875,-1) node[below]{$g$};
+
+\draw[thick,blue,<->,>=stealth'] (3.65,-0.95)--(4,-0.95) (3.8,0)--(4,0) (3.9,0)--(3.9,-0.95) node[midway,left]{$w$};
+
+\draw[blue,thick,<-,>=stealth'](3.75,0.15) -- (3.75,0.5) (0,0.3)--(1.65,0.3) node [right]{$l$};
+\draw[blue,thick,->,>=stealth'](2.1,0.3)--(3.75,0.3);
+\end{tikzpicture}

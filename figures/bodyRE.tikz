@@ -1,0 +1,26 @@
+\usetikzlibrary{%
+    decorations.pathreplacing,%
+    decorations.pathmorphing,arrows
+}
+
+\begin{tikzpicture}
+
+
+\draw [->,thick, blue, >=stealth](-3,0.85)--(-1.25,0.85) node[right] {$v$} node[above,midway] {$\rho, \mu$}; 
+\draw [thick, blue, >=stealth,dashed](-3,0.85)--++(-15:1.75);
+\draw [<->,thick, blue, >=stealth](-1.5,0.85) arc(0:-15:1.5) node[below] {$\alpha$};
+
+\begin{scope}[y=0.80pt, x=0.8pt,yscale=-1,yshift=-850]
+  \path[draw=black,fill=gray] (12.2092,1002.1870) .. controls (4.7404,1008.6595) and
+    (2.2567,1016.3308) .. (2.2567,1020.5208) .. controls (2.2567,1024.7120) and
+    (-1.9333,1037.2845) .. (6.9717,1043.5708) .. controls (15.8767,1049.8570) and
+    (26.8779,1053.0008) .. (34.2117,1049.8570) .. controls (41.5467,1046.7145) and
+    (51.4992,1037.2845) .. (50.4517,1026.8083) .. controls (49.4042,1016.3308) and
+    (47.3079,1014.7595) .. (40.4967,1009.5208) .. controls (33.6892,1004.2820) and
+    (20.0679,995.3758) .. (12.2092,1002.1870) -- cycle;
+\end{scope}
+
+\draw[thick,blue] (0.05,-0.1)--(0.05,0.3) (1.45,-0.1)--(1.45,0.3);
+\draw[thick,blue,<-,>=stealth'](0.04,0.1)--(0.51,0.1) node[right] {$l$};
+\draw[thick,blue,<-,>=stealth'](1.45,0.1)--(1.0,0.1);
+\end{tikzpicture}

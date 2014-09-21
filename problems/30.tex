@@ -1,0 +1,21 @@
+\begin{problem}[30]
+估计和比较含水地层中弹性变形和渗流的传播时间.
+\end{problem}
+% --------------------------------------------------------------------
+\begin{solution}
+由达西定律, 渗流的水力坡度与渗流流速的一次方成正比, 即渗流的流速
+\[
+v = kJ = -k \frac{dH}{ds}
+\]
+其中$k$为渗透系数, $J$为水力坡降. 因此渗流的传播的特征时间为
+\[
+t_\mathrm{i.f.} \approx \frac{l}{v}
+\]
+其中$l$为特征长度, 这里取$l=1\mathrm{m}$.  含水层的渗透系数为$100-0.001\mathrm{cm/s}$, 这里取$k=10^{-3}\mathrm{m/s}$, 水力陂度$J=1$, 杨氏模量为$E=10^9 \mathrm{Pa}$, 密度近似取水的密度$10^3\mathrm{kg/m^3}$. 以上参数的选取参考了\cite{basic_Hydrogeology, viera_mathematical_2012, wiki_hydraulic_conductivity}.则弹性变形和渗流的传播时间为
+\[
+t_\mathrm{e.w.} \approx \frac{l}{\sqrt{E/\rho}} = \frac{1\mathrm{m}}{\sqrt{10^9 \mathrm{Pa}/ 10^3\mathrm{kg/m^3}}} = 10^{-3} \mathrm{s},
+\qquad
+t_\mathrm{i.f.} \approx  \frac{l}{v} = \frac{1\mathrm{m}}{1\times10^{-3}\mathrm{m/s}} = 10^3 \mathrm{s}
+\]
+由此可见, 含水地层中弹性变形和渗流的传播时间相差约六个量级, 由局部渗流引起的应力和应变的变化极其迅速地传播到物体内部各处, 而渗流与其相比则十分缓慢. 可以近似地认为两种效应是可以解耦的\footnote{\textcolor{red}{谈老师批注: 若考虑土壤骨架变形, 分析会更复杂一些.} 由于时间关系, 有关土壤骨架变形的讨论, 本人暂未补充.}.
+\end{solution}
